@@ -1,0 +1,11 @@
+<div style="margin: 20px;">
+  <!-- Zone de texte pour ajouter du contenu -->
+  <input [(ngModel)]="msg" placeholder="Entrez un message" />
+  <button (click)="ajouterMessage()">Ajouter</button>
+  <button (click)="supprimerDernierMessage()">Supprimer</button> <!-- Bouton pour supprimer -->
+</div>
+
+<ul>
+  <!-- Boucle pour afficher tous les messages avec leur couleur respective -->
+  <li *ngFor="let n of msgs" [style.color]="n.color">{{ n.text }}</li>
+</ul>
